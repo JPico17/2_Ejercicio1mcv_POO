@@ -42,9 +42,12 @@ public class Mayor2Enteros
     }
     public void hallarMayor()
     {
-        if(x > y){
+        if(x > y)
+        {
             mayor = x;
-        }else{
+        }
+        else
+        {
             mayor = y;
         }
     }
