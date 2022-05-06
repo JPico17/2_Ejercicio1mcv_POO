@@ -3,46 +3,53 @@ package modelo;
 public class Mayor2Enteros 
 {
     //----------
-    // Atributos
+    //Atributos
     //----------
     private int x;
     private int y;
     private int mayor;
 
-    //--------
-    // Metodos
-    //--------
+
+    //----------
+    //metodos
+    //----------
+
+    /*metodo constructor*/
     public Mayor2Enteros(int pX, int pY)
     {
         this.x = pX;
         this.y = pY;
         this.mayor = 0;
     }
-    public void setX(int x)
+
+    public void setX(int x) 
     {
         this.x = x;
     }
 
-    public int getX()
+    public int getX() 
     {
         return x;
     }
 
-    public void setY(int y)
+    public void setY(int y) 
     {
-        this.y=y;
+        this.y = y;
     }
+
     public int getY()
     {
         return y;
     }
-    public int getMayor()
+
+    public int getMayor() 
     {
         return mayor;
     }
+
     public void hallarMayor()
     {
-        if(x > y)
+        if(x>y)
         {
             mayor = x;
         }

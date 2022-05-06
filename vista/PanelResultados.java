@@ -1,51 +1,54 @@
 package vista;
 
-import static javax.swing.BorderFactory.createTitledBorder;
-
 import java.awt.Color;
+import java.awt.Dimension;
 
+import javax.swing.BorderFactory;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.border.TitledBorder;
 
+import org.w3c.dom.Text;
+
 public class PanelResultados extends JPanel
 {
-    //--------------
+    private static final Dimension Text = null;
+    //--------------------
     // Atributos
-    //--------------
+    //--------------------
     private JTextArea taResultado;
     private JScrollPane spResultado;
-    //--------------
-    // Metodos
-    //--------------
 
-    /*Metodo constructor*/
+    //--------------------
+    // Métodos
+    //--------------------
+
+    /*Método constructor*/
     public PanelResultados()
     {
-        // Definir contenedor del panel
         this.setLayout(null);
-        this.setBackground(Color.white);
+        this.setBackground(Color.WHITE);
 
-        //Crear y agregar area de texto 
+        //Crear y agregar area de texto
         taResultado = new JTextArea();
         spResultado = new JScrollPane(taResultado);
-        spResultado.setBounds(10,20,460,100);
+        spResultado.setBounds(10,20,460, 100);
         this.add(spResultado);
 
         //Borde y titulo al panel
-        TitledBorder borde= createTitledBorder("Datos de Resultados");
-        borde.setTitleColor(Color.BLUE);
+        TitledBorder borde = BorderFactory.createTitledBorder("Resultados");
+        borde.setTitleColor(Color.BLACK);
         this.setBorder(borde);
-        
-    }
-    //Metodos de acceso a la informacion 
-    public void mostrarResultado(int pmayor)
-    {
-        taResultado.setText("El numero mayor es: " + pmayor);
     }
 
-    //Borrar los resultados
+    // Metodo de acceso a la información
+    public void mostrarResultado(int pMayor)
+    {
+        taResultado.setText("El numero mayor es: " + pMayor);
+    }
+
+    // Borrar resultados
     public void borrar()
     {
         taResultado.setText("");
