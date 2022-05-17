@@ -15,11 +15,9 @@ public class PanelEntradaDatos extends JPanel
     // Atributos
     //--------------------
     private JLabel lX;
-    private JLabel lY;
     private JLabel lImagen;
     private ImageIcon iImagen;
-    private JTextField tfX;
-    private JTextField tfY;
+    private JTextField TfGanancia;
 
     //--------------------
     // Métodos
@@ -38,24 +36,14 @@ public class PanelEntradaDatos extends JPanel
         this.add(lImagen);
 
         //Crear y agregar etiqueta X
-        lX = new JLabel("X = ");
-        lX.setBounds(220, 50, 120, 20);
+        lX = new JLabel("Ingrese el valor de su compra = ");
+        lX.setBounds(210, 70, 300, 40);
         this.add(lX);
 
         //Crear y agregar caja de texto X
-        tfX = new JTextField();
-        tfX.setBounds(260, 50, 100, 20);
-        this.add(tfX);
-
-        //Crear y agregar etiqueta Y
-        lY = new JLabel("Y = ");
-        lY.setBounds(220, 100, 120, 20);
-        this.add(lY);
-
-        //Crear y agregar caja de texto Y
-        tfY = new JTextField();
-        tfY.setBounds(260, 100, 100, 20);
-        this.add(tfY);
+        TfGanancia = new JTextField();
+        TfGanancia.setBounds(290, 100, 100, 20);
+        this.add(TfGanancia);
 
         //Borde y titulo al panel
         TitledBorder borde = BorderFactory.createTitledBorder("Datos de entrada");
@@ -64,20 +52,14 @@ public class PanelEntradaDatos extends JPanel
     }
 
     // Métodos de acceso a la informacion
-    public String getTfX()
+    public String getGanancia()
     {
-        return tfX.getText();
-    }
-
-    public String getTfY()
-    {
-        return tfY.getText();
+        return TfGanancia.getText();
     }
 
     // Metodo borrar cajas de text
     public void borrar()
     {
-        tfX.setText("");
-        tfY.setText("");
+        TfGanancia.setText("");
     }
 }

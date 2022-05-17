@@ -43,9 +43,9 @@ public class PanelResultados extends JPanel
     }
 
     // Metodo de acceso a la información
-    public void mostrarResultado(int pMayor)
+    public void mostrarResultado(double ganancia, double precioVenta)
     {
-        taResultado.setText("El numero mayor es: " + pMayor);
+        taResultado.setText("El valor del producto es : " + precioVenta + " y la ganancia es de "+ganancia);
     }
 
     // Borrar resultados

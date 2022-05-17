@@ -33,7 +33,7 @@ public class VentanaPrincipal extends JFrame
         this.add(miPanelResultados);
 
         //Caracteristicas de la ventana
-        this.setTitle("Ejercicio 1 MVC");
+        this.setTitle("DUEÑO PAPELERIA");
         this.setSize(500, 500);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setVisible(true);

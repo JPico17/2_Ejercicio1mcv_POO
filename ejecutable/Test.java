@@ -1,7 +1,7 @@
 package ejecutable;
 
 import controlador.Controlador;
-import modelo.Mayor2Enteros;
+import modelo.Papeleria;
 import vista.VentanaPrincipal;
 
 public class Test 
@@ -9,7 +9,13 @@ public class Test
     public static void main(String[] args) 
     {
         VentanaPrincipal miVentana = new VentanaPrincipal();
-        Mayor2Enteros miModelo = new Mayor2Enteros(0, 0);
+        Papeleria miModelo = new Papeleria((double) 0);
+        //miModelo.setPrecio(2000);
+        //miModelo.hallarGanacia();
+        //System.out.println("Precio: " + miModelo.getPrecio());
+        //System.out.println("Ganancia: " + miModelo.getGanancia());
+        //System.out.println("Precio venta: " + miModelo.getPrecioVenta());
+
         Controlador miControlador = new Controlador(miVentana, miModelo);
         
     }

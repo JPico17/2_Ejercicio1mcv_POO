@@ -3,7 +3,7 @@ package controlador;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import modelo.Mayor2Enteros;
+import modelo.Papeleria;
 import vista.VentanaPrincipal;
 
 public class Controlador implements ActionListener
@@ -12,14 +12,14 @@ public class Controlador implements ActionListener
     //Atributos
     //--------------
     private VentanaPrincipal vista;
-    private Mayor2Enteros modelo;
+    private Papeleria modelo;
 
     //--------------
     //Metodos
     //--------------
 
     //Metodo constructor
-    public Controlador(VentanaPrincipal pVista, Mayor2Enteros pModelo)
+    public Controlador(VentanaPrincipal pVista, Papeleria pModelo)
     {
         this.vista = pVista;
         this.modelo = pModelo;
@@ -47,10 +47,9 @@ public class Controlador implements ActionListener
 
         if(comando.equals("hallar"))
         {
-            modelo.setX(Integer.parseInt(vista.miPanelEntradaDatos.getTfX()));
-            modelo.setY(Integer.parseInt(vista.miPanelEntradaDatos.getTfY()));
-            modelo.hallarMayor();
-            vista.miPanelResultados.mostrarResultado(modelo.getMayor());
+            modelo.setPrecio(Integer.parseInt(vista.miPanelEntradaDatos.getGanancia()));
+            modelo.hallarGanacia();
+            vista.miPanelResultados.mostrarResultado(modelo.getGanancia(), modelo.getPrecioVenta());
         }
     }
 }
